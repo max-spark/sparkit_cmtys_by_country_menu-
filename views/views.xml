@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+      <record model="ir.actions.act_window" id="burundi_partnered_list_action">
+        <field name="name">Burundi Communities</field>
+        <field name="res_model">sparkit.community</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,calendar,kanban</field>
+        <field name="domain">[('is_partnered', '=', 'True'),
+          ('country_id', '=', 25)]</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">Create the first community!</p>
+        </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="rwanda_partnered_list_action">
+        <field name="name">Rwanda Communities</field>
+        <field name="res_model">sparkit.community</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,calendar,kanban</field>
+        <field name="domain">[('is_partnered', '=', 'True'), ('country_id', '=', 193)]</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">Create the first community!</p>
+        </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="uganda_partnered_list_action">
+        <field name="name">Uganda Communities</field>
+        <field name="res_model">sparkit.community</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,calendar,kanban</field>
+        <field name="domain">[('is_partnered', '=', 'True'), ('country_id', '=', 232)]</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">Create the first community!</p>
+        </field>
+      </record>
+
+      <menuitem id="all_partnered_list_action" name="All" sequence="1"
+        parent="sparkit.partnered_communities"/>
+      <menuitem id="burundi_list_menu" name="Burundi" sequence="2"
+        parent="sparkit.partnered_communities" action="burundi_partnered_list_action"/>
+      <menuitem id="rwanda_list_menu" name="Rwanda" sequence="3"
+        parent="sparkit.partnered_communities" action="rwanda_partnered_list_action"/>
+      <menuitem id="uganda_list_menu" name="Uganda" sequence="4"
+        parent="sparkit.partnered_communities" action="uganda_partnered_list_action"/>
+
+    </data>
+</openerp>
